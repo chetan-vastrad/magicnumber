@@ -10,6 +10,7 @@ const Topmenu = () => {
   const navigate = useNavigate();
   const handleLogout = () => {
     navigate("/login");
+    localStorage.removeItem("user");
   };
  const [viewMenu, setViewMenu]  = useState (false);
  const menuRef = useRef(null);
