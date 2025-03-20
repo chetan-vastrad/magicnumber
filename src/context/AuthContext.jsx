@@ -36,18 +36,18 @@ import { useState, useContext, createContext, useEffect } from "react";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [userId, setUserId] = useState(() => {
-    return localStorage.getItem("user_id") || null;
-  });
+  const [userId, setUserId] = useState(null);
 
   useEffect(() => {
-    console.log("Auth State Updated: userId =", userId);
-  }, [userId]);
+    const storedUserId = localStorage.getItem("user_id");
+    if (storedUserId) {
+      setUserId(storedUserId);
+    }
+  }, []);
 
   const login = (id) => {
     localStorage.setItem("user_id", id);
     setUserId(id);
-    console.log("User logged in with ID:", id);
   };
 
   const logout = () => {
@@ -62,9 +62,6 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  return context;
-};
+export const useAuth = () => useContext(AuthContext);
 
 
