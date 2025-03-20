@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import BeforeLogin from "./component/BeforeLogin";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "./component/loginpages/SignUp";
 import Otp from "./component/loginpages/Otp";
 import ForgotPassword from "./component/loginpages/ForgotPassword";
