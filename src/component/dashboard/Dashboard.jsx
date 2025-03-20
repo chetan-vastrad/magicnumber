@@ -168,26 +168,26 @@ const Dashboard = () => {
   }, [navigate]);
 
   // Wallet Balance
-  // useEffect(() => {
-  //   const fetchWalletData = async () => {
-  //     try {
-  //       console.log("Fetching wallet balance...");
-  //       const response = await fetch(
-  //         `https://numasoft.org/magic_number/public/api/balance/${userData.id}`
-  //       );
+  useEffect(() => {
+    const fetchWalletData = async () => {
+      try {
+        console.log("Fetching wallet balance...");
+        const response = await fetch(
+          `https://numasoft.org/magic_number/public/api/balance/${userData.id}`
+        );
 
-  //       const data = await response.json();
-  //       console.log("Fetched Wallet Data:", data.data.user.winning_amount);
-  //       setWalletData(data.data.user);
-  //     } catch (err) {
-  //       console.error("Error fetching wallet balance:", err);
-  //       alert("Failed to fetch wallet balance. Please check your network.");
-  //     } finally {
-  //     }
-  //   };
+        const data = await response.json();
+        console.log("Fetched Wallet Data:", data.data.user.winning_amount);
+        setWalletData(data.data.user);
+      } catch (err) {
+        console.error("Error fetching wallet balance:", err);
+        alert("Failed to fetch wallet balance. Please check your network.");
+      } finally {
+      }
+    };
 
-  //   fetchWalletData();
-  // }, [tradeSucess]);
+    fetchWalletData();
+  }, [tradeSucess]);
 
   // Winning Number Api
   useEffect(() => {
@@ -239,7 +239,7 @@ const Dashboard = () => {
         <Topmenu />
         <div className="bulltrading-main">
           <div className="bullTrading">
-            <img src={bullTrading} alt="Bull Logo" srcset="" />
+            <img src={bullTrading} alt="Bull Logo" srcSet="" />
             <div className="predictLogo">
               {timeLeft <= 10 && bullOpenNumber.length > 0 ? (
                 <h3>{bullOpenNumber}</h3>
@@ -418,7 +418,7 @@ const Dashboard = () => {
       {showWinPopup && (
         // <div class="overlay"></div>
         <div className="winpoup">
-          <img src={win} alt="" srcset="" />
+          <img src={win} alt="" srcSet="" />
           <p>Your Trade on</p>
           <span>{bullOpenNumber}</span>
           <h3>Matched the Open Number.</h3>
@@ -432,7 +432,7 @@ const Dashboard = () => {
       )}
       {showLossPopup && (
         <div className="loss">
-          <img src={loss} alt="" srcset="" />
+          <img src={loss} alt="" srcSet="" />
           <h3>None of your trades matched the Open Number.</h3>
           <div className="winpoupclosebtn">
             <button
