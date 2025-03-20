@@ -1,0 +1,377 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #000033;
+}
+.bgforAllPages{
+  background-color: #000033;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.mainlogo{
+  width: 200px;
+}
+.mainlogo {
+  width: 100px; /* Start smaller */
+  animation: scaleUp 0.5s ease-out forwards;
+}
+.mainPage{
+  background-color: #000033;
+  /* height: 100vh; */
+  padding: 10px 20px;
+}
+.mainHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.mainHeader img:nth-child(1){
+  /* visibility: hidden; */
+}
+.bullTrading{
+  border: 1.5px solid #00DEFF;
+  text-align: center;
+  padding: 10px;
+  border-radius: 14px;
+}
+.bullTrading img:nth-child(2){
+  margin: 14px 0;
+}
+.bullTrading p{
+  font-family: "Aldrich", serif;
+  font-size: 20px;
+  text-transform:uppercase;
+  color: #00DEFF;
+  margin-bottom: 14px;
+}
+.bullTrading span{
+  font-family:"digital";
+  font-size: 32px;
+}
+.predictLogo{
+  background-image: url("./assets/predictlogo-1.png");
+  background-repeat: no-repeat;
+  height: 45vh;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.predictLogo p{
+  color: #FFFFFF;
+  font-size: 10px;
+  margin-bottom: 0;
+}
+.predictNumberInput{
+  position: relative;
+  margin-top: 20px;
+}
+.predictNumberInput input{
+  width: 100%;
+  background-color: transparent;
+  border: 1.5px solid #00DEFF;
+  padding: 25px  0;
+  border-radius: 14px;
+}
+.predictNumberFieldInner{
+  width: 100%;
+  background-color: transparent;
+  border: 1.5px solid #00DEFF;
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+.predictNumberFieldInner ul,.predictNumberFieldInner ul li {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.predictNumberFieldInner ul li span{
+  background-color: white;
+  color: black;
+  padding: auto;
+  font-size: 16px;
+  border-radius: 2px;
+  padding: 5px 10px;
+}
+.predictNumberFieldText{
+position: relative;
+}
+.predictNumberFieldText span{
+  background-color: black;
+  position: absolute;
+  /* top: -50px; */
+  font-size: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.predictionInput{
+  background-color: #0D0820;
+  position: absolute;
+  top: 0;
+  font-size: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.predictNumberSection{
+  text-align: center;
+  font-size: 24px;
+  list-style:none;
+}
+.predictNumberSection h3{
+  margin:10px 0 -10px 0;
+}
+.predictNumberSection h4{
+  margin-top: 14px;
+}
+.predictNumberSection span{
+  font-size: 12px;
+}
+ul.predictNumber{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.predictNumber li{
+list-style: none;
+background-color: #FFFFFF;
+font-size: 32px;
+padding: 7px 15px;
+margin: 10px;
+color: #000000;
+border-radius: 5px;
+width: 20px;
+text-align: center;
+box-shadow: 0 0 5px white;
+}
+.predictNumber li a{
+  text-decoration: none;
+  color: black;
+}
+.bigbullinner{
+  text-align: center;
+}
+.bigBullTrading{
+  border: 1.5px solid #FE2A16;
+  padding: 10px;
+  border-radius: 14px;
+  margin-top: 15px;
+  margin-bottom: 70px;
+}
+.disbigbull span{
+  color: #878787;
+  font-size: 12px;
+  text-align: left;
+}
+.slotOne{
+  background-color: #150F2C;
+  border-radius: 14px;
+  padding: 10px;
+  margin:20px 0;
+}
+.slotOne a{
+  text-decoration: none;
+}
+.slotHead{
+  display: flex;
+  justify-content: space-between;
+}
+.slotHead button{
+  padding: 10px;
+  border: 1px solid red;
+  color: red;
+  border-radius: 4px;
+  font-size: 24px;
+  padding: 5px;
+  background-color: transparent;
+}
+.slotHead div:last-child p{
+  font-size: 12px;
+  color: #878787;
+}
+.slotHead div:last-child span{
+  font-size: 20px;
+  color: white;
+  font-family: "digital", serif;;
+}
+.slotButtom{
+  display: flex;
+  justify-content: space-between;
+}
+.slotButtom .slotButtom-inner span{
+  font-size: 12px;
+  color: gray;
+}
+.slotButtom .slotButtom-inner p{
+  color: white;
+}
+hr{
+  color: white;
+}
+.slotButtom-inner{
+  text-align: center;
+}
+.slotButtom .slotButtom-inner:last-child p{
+  text-align: right;
+  background-color:#5E9850;
+  color: white;
+  padding: 1px 5px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.slotButtom .slotButtom-inner:last-child {
+  text-align: end;
+}
+hr.centerrow{
+  margin:20px 0;
+}
+.predictNumberPoup{
+  background-color: #000033;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 2px;
+  padding: 28px;
+  height: 80vh;
+  overflow-y: auto;
+  transition: height 0.5sease-in-out;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+.closeBtn {
+  position: fixed;
+  top: 90px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+/* .predictNumberWalletInner{
+  margin: 15px;
+  background-color: #1B1B4C;
+
+} */
+.predictNumberPoupHeader{
+  padding: 15px;
+  background-color: #1B1B4C;
+  border-radius: 12px;
+  margin-bottom: 50px;
+}
+.predictNumberWalletInner {
+  background-color: #1B1B4C;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.predictNumberWalletInner span{
+  font-size: 12px;
+  color: gray;
+}
+.predictNumberWalletInner p{
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.predictNumberAddBtn{
+  display: flex;
+  justify-content: space-between;
+}
+.predictNumberAddBtn p:first-child{
+font-size: 14px;
+color: #0B63E3;
+}
+.predictNumberAddBtn p:last-child{
+font-size: 14px;
+color: #FE7400;
+}
+.enteredValue{
+  text-align: center;
+  padding: 10px 0;
+}
+.enteredValue h5{
+  display: inline;
+  padding: 10px 20px;
+  background-color: white;
+  color: #000000;
+  font-size: 32px;
+  border-radius: 4px;
+}
+.popupCenter h4{
+  font-size: 20px;
+margin:15px 0;
+}
+.popupCenter input[type="number"]{
+  padding: 10px;
+  background-color: #393939;
+  border-radius: 8px;
+  color: #FFFFFF;
+  width: 80%;
+  box-sizing: border-box;
+  font-size: 32px;
+  border: none;
+}
+.popupCenter span{
+  font-size: 32px;
+}
+.popupCenter p{
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.addBonusBtn span{
+font-size: 16px;
+}
+.addBonusBtn{
+  margin-bottom: 30px;
+}
+.totalAmount{
+  text-align: center;
+}
+.totalAmount h6{
+  font-size: 20px;
+}
+.tradeBtn{
+  display: block;
+  margin-top: 30px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #0B63E3;
+  color: #FFFFFF;
+  border: none;
+}
+.predictLogo h3{
+  font-size: 80px;
+}
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+@keyframes scaleUp {
+  from {
+    width: 100px;
+  }
+  to {
+    width: 200px;
+  }
+}

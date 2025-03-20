@@ -1,0 +1,149 @@
+.mainBottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #32363C;
+    z-index: 20000;
+    border-radius: 15px 15px 0 0;
+}
+
+.bottomInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    width: 100%;
+}
+
+/* Top Menu */
+.topmenuinner {
+    position: fixed; /* Stays at the top-right even on scroll */
+    top: 0;
+    right: 0;
+    width: 40%;
+    padding: 20px;
+    box-shadow: 0 0 2px gray;
+    border-radius: 10px 0 0 10px;
+    background-color:#000033;
+    z-index: 1000;
+}
+.topmenuheader,.topmenucenter{
+    text-align: end;
+}
+.topmenuheader span{
+    font-size: 12px;
+    color: gray;
+}
+.topmenuheader p{
+    font-size: 16px;
+    color: #40E117;
+}
+.topmenuheader h3{
+    font-size: 24px;
+    color: white;
+    margin:10px 0 30px 0;
+}
+.topmenucenter ul li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+.topmenucenter ul li a{
+    color: white;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-decoration: none;
+}
+.referal{
+    background-image: url("../../assets/refimg.png");
+    padding: 10px;
+    border-radius: 10px;
+}
+.referal a{
+    font-size: 12px;
+    color: #878787;
+}
+.copy-btn{
+    display: flex;
+    justify-content: space-between;
+}
+.copy-btn button{
+    margin:10px 0;
+    padding:10px 16px;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 14px;
+    border: none;
+}
+.logoutbtn{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.logoutbtn span{
+    font-size: 10px;
+    color: #878787;
+}
+.logoutbtn h6{
+    font-size: 16px;
+}
+.bottomInner a.active img {
+    filter: brightness(0) invert(1); 
+}
+.winpoup, .loss{
+    height: 80vh;
+    background-color: #000033;
+    box-shadow: 0 0 2px white;
+    text-align: center;
+    border-radius: 10px 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 60px;
+    padding: 20px;
+    z-index: 9999;
+    overflow: scroll;
+}
+.winpoup img{
+    margin-bottom: 20px;
+}
+.winpoup p{
+    margin-bottom: 20px;
+}
+
+.winpoup span{
+background-color: white;
+padding: 10px;
+text-align: center;
+font-size: 32px;
+color: black;
+border-radius: 5px;
+}
+.winpoup h3{
+    margin: 20px 0;
+}
+.winpoup h2{
+    font-size: 32px;
+    margin-top: -20px;
+}
+.winpoupclosebtn{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.winpoupclosebtn button:first-child{
+    border: 1px solid #EFF0F6;
+    padding: 10px 40px;
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+}
+.winpoupclosebtn button:last-child{
+   background-color:  #FE2B18;
+    padding: 10px 30px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}

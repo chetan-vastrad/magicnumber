@@ -1,0 +1,155 @@
+.loginpages {
+    padding: 10px 20px;
+}
+
+.loginImage {
+    text-align: center;
+}
+
+.loginImage img {
+    width: 300px;
+}
+
+.loginpages h3 {
+    font-size: 32px;
+}
+
+.loginpages span {
+    font-size: 12px;
+    color: gray;
+}
+
+.loginForm {
+    margin-top: 20px;
+}
+.form-group{
+    margin-bottom: 10px;
+}
+.form-group label, .form-group-registration label{
+    display: block;
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 5px;
+}
+.form-group input {
+    width: 88%;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+    font-size: 14px;
+    color: #6C7278;
+    padding-left: 12%;
+}
+.form-group-registration{
+    margin-bottom: 10px;
+}
+.form-group-registration input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+    font-size: 14px;
+    color: #6C7278;
+    box-sizing: border-box;
+}
+.form-group-registration select{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+select option{
+    background-color: white;
+}
+.agreeTermsBtn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.flaglogo img{
+    position: absolute;
+    left: 7px;
+    background: transparent;
+    bottom: 10px;
+}
+.flaglogo::after {
+    content: "";
+    position: absolute;
+    left: calc(33px);
+    bottom: 0px;
+    width: 1px;
+    height: 35px;
+    background-color: #c1c1c1;
+}
+.flaglogo-lock, .flaglogo{
+    position: relative;
+}
+.flaglogo-lock img{
+    position: absolute;
+    left: 7px;
+    background: transparent;
+    bottom: 8px;
+    width: 22px;
+}
+.flaglogo-lock::after{
+    content: "";
+    position: absolute;
+    left: calc(33px);
+    bottom: 0;
+    width: 1px;
+    height: 35px;
+    background-color: #c1c1c1;
+}
+.fromSubmitButton{
+    width: 100%;
+    background-color: #0B63E3;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.forgotPasswordBtn{
+    text-align: center;
+}
+.forgotPasswordBtn a{
+    color:#00DEFF;
+    font-size: 12px;
+    text-decoration: none;
+}
+.signUpBtn{
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+    margin-top: 50px;
+}
+.signUpBtn a {
+    color: #00DEFF;
+    text-decoration: none;
+}
+.form-otp input{
+    width: 13%;
+    padding: 5px 0;
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+    font-size: 14px;
+    color: #6C7278;
+    margin-bottom: 10px;
+    font-size: 32px;
+    text-align: center;
+}
+.form-otp  label {
+    display: block;
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 5px;
+}
+.enterOtp{
+    display: flex;
+    justify-content: space-between;
+}

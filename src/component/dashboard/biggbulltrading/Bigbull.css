@@ -1,0 +1,222 @@
+.bigbullopennumber{
+    background-image: url("../../../assets/opennumber.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 55vh; 
+    text-align: center
+}
+.bigbullmainpage{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.bigbullmainpage p{
+color: #FE5300;
+/* font-size: 20px; */
+text-transform: uppercase;
+}
+.bigbullmainpage span{
+    font-size:40px;
+    font-family: "digital";
+}
+.bigbullopennumber p{
+    font-size: 14px;
+}
+.bigbulltadebtnsection{
+    padding: 20px;
+    border: 1px solid red;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 65px;
+}
+.bigbulltadebtnsection ul{
+    display: flex;
+    list-style: none;
+}
+.bigbulltadebtnsection ul li{
+    background-color: white;
+    color: #1B1B4C;
+    list-style: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+.bigbulltadebtnsection button{
+    padding: 15px;
+    background-color: #FE2B18;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    border: none;
+}
+.addmoreValues{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.przepoolamount{
+    border:1px solid #FE2B18;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.przepoolamount span{
+    font-size: 12px;
+}
+.bigbulltrading{
+ padding: 10px 20px;   
+}
+/* BB  */
+.bbheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bbopennumber{
+    background-image: url("../../../assets/opennumber.png");
+    height: 55vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+}
+.bbtime{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.bbtime p{
+    color: #FE5300;
+    font-size: 20px;
+}
+.bbtime span{
+    color: white;
+    font-size: 32px;
+    font-family: "digital";
+}
+.predictbigbullnumber{
+    margin: 20px;
+}
+.predictbigbullenterNumber{
+    background-color: #1B1B4C;
+    padding: 10px;
+    border-radius: 10px;
+}
+.bigbullbalances{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.bigbullText{
+    font-size: 12px;
+    color: #878787;
+    margin: 20px 0;
+}
+.prizpool{
+    border: 1px solid #FE2A16;
+    padding: 10px;
+    border-radius: 8px;
+}
+.bbtradenumber{
+    text-align: center;
+    margin: 10px 0;
+}
+.bbtradenumbers{
+    padding: 20px;
+    border: 1px solid #FE2A16;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.bbtradenumbers ul{
+    display: flex;
+    gap: 5px;
+}
+.bbtradenumbers ul li{
+    background-color: white;
+    color: #1B1B4C;
+    list-style: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.enterbbtradenumber{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.enterbbtradenumber input{
+    background-color: #393939;
+    width: 15%;
+    font-size: 32px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+}
+.enterbbtradenumber button{
+    width: 80%;
+    background-color: #FE2B18;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+}
+.winnigamount{
+    text-align: center;
+}
+.winnigamount p{
+    font-size: 20px;
+    margin:10px 0;
+}
+.winnigamount h6{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.winnigamount button{
+    background-color: #FE2A16;
+    border: none;
+    padding: 15px;
+    color: white;
+    width: 100%;  
+    border-radius: 10px;
+}
+.bigbullopennumber h3, .bbopennumber h3{
+    font-size: 80px;
+}
+.predictbigbull{
+background-color: #000033;
+border-radius: 10px 10px 0 0;
+box-shadow: 0 0 2px;
+padding: 10px;
+height: 80vh;
+overflow-y: auto;
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+box-sizing: border-box;
+margin-bottom: 50px;
+z-index: 1000;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+  }
