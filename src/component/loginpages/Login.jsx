@@ -26,11 +26,12 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     setError(null);
-
+  
     const loginDetails = {
       phone_number: phone,
       password: password,
     };
+  
     try {
       const response = await axios.post(
         "https://numasoft.org/magic_number/public/api/user-login",
@@ -41,18 +42,22 @@ const Login = () => {
           },
         }
       );
-      if (response.data.user.id) {
-        // Ensure API returns user.id
+  
+      console.log("API Response:", response.data); // Debugging response
+  
+      if (response.data && response.data.user && response.data.user.id) {
         localStorage.setItem("user", JSON.stringify(response.data.user));
-        login(response.data.user.id); // Call AuthContext login function
+        login(response.data.user.id);
         navigate("/dashboard");
       } else {
-        console.error("Login failed: No user ID Match");
+        setError("Login failed: Invalid credentials or server error.");
       }
     } catch (err) {
+      console.error("Login Error:", err.response ? err.response.data : err.message);
       setError("Something went wrong! Please try again.");
     }
   };
+  
   return (
     <div className="loginpages">
       <div className="loginImage">
