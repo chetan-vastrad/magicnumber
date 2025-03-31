@@ -4,7 +4,7 @@ import "./Login.css";
 import mainImage from "../../assets/mainLogo.png";
 import flag from "../../assets/flag.png";
 import lock from "../../assets/locked.png";
-import { useAuth } from "../../context/AuthContext";
+// import { useAuth } from "../../context/AuthContext";
 import axios from "axios";
 
 const Login = () => {
@@ -12,8 +12,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate(); // To redirect after login
-  const userData = JSON.parse(localStorage.getItem("user"));
-  const { login } = useAuth();
+  // const userData = JSON.parse(localStorage.getItem("user"));
+  // const { login } = useAuth();
 
   const phoneChangeHandler = (e) => {
     setPhone(e.target.value);
@@ -43,18 +43,25 @@ const Login = () => {
         }
       );
   
-      console.log("API Response:", response.data); // Debugging response
-  
-      if (response.data && response.data.user && response.data.user.id) {
+      console.log("API Response:", response.data);
+      if (response.data) {
+        // Store both in localStorage and context
+        localStorage.setItem("user_id", response.data.user.id)
         localStorage.setItem("user", JSON.stringify(response.data.user));
-        login(response.data.user.id);
+        
+        // Update to pass both id and user data
+        // login(response.data.user.id, response.data.user);
+        
+        // Add slight delay to ensure state updates
+        // await new Promise(resolve => setTimeout(resolve, 50));
+        
         navigate("/dashboard");
       } else {
         setError("Login failed: Invalid credentials or server error.");
       }
     } catch (err) {
       console.error("Login Error:", err.response ? err.response.data : err.message);
-      setError("Something went wrong! Please try again.");
+      setError(err.response?.data?.message || "Something went wrong! Please try again.");
     }
   };
   

@@ -19,7 +19,7 @@ const BottomMenu = () => {
             <img src={wallet} alt="" srcset="" />
           </NavLink>
           <NavLink
-            to="/winnigstrategy"
+            to="/winningstrategy"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             <img src={str} alt="" srcset="" />

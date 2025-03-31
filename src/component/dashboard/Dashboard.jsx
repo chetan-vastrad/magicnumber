@@ -22,7 +22,8 @@ const Dashboard = () => {
   const [showLossPopup, setShowLossPopup] = useState(false);
   const [timeOverPoup, setTimeOverPoup] = useState(false);
   const [pageLoading, setLoading] = useState(false);
-  const userData = JSON.parse(localStorage.getItem("user"));
+  const userDataString = localStorage.getItem("user");
+  const userData = userDataString ? JSON.parse(userDataString) : null;
 
   // Timer 120 Sec Start
   const countdownDuration = 120; // 120 seconds (2 minutes)
@@ -158,14 +159,14 @@ const Dashboard = () => {
     }
   };
 
-  const navigate = useNavigate();
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("userLoggedIn");
-
-    if (!isLoggedIn) {
-      navigate("/login"); // Redirect to login if user is not logged in
-    }
-  }, [navigate]);
+  // const navigate = useNavigate();
+  // useEffect(() => {
+  //   const isLoggedIn = localStorage.getItem("userLoggedIn") === true;
+  //   console.log("Navigating to /dashboard");
+  //   if (!isLoggedIn) {
+  //     navigate("/login"); // Redirect to login if user is not logged in
+  //   }
+  // }, [navigate]);
 
   // Wallet Balance
   useEffect(() => {
@@ -176,18 +177,19 @@ const Dashboard = () => {
           `https://numasoft.org/magic_number/public/api/balance/${userData.id}`
         );
 
-        const data = await response.json();
-        console.log("Fetched Wallet Data:", data.data.user.winning_amount);
-        setWalletData(data.data.user);
+        if (response.data?.data?.user) {
+          setWalletData(response.data.data.user);
+        }
       } catch (err) {
         console.error("Error fetching wallet balance:", err);
         alert("Failed to fetch wallet balance. Please check your network.");
       } finally {
       }
     };
-
-    fetchWalletData();
-  }, [tradeSucess]);
+    if (userData?.id) {
+      fetchWalletData();
+    }
+  }, [tradeSucess, userData?.id]);
 
   // Winning Number Api
   useEffect(() => {
